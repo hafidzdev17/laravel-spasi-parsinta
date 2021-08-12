@@ -1,3 +1,5 @@
-<div class="alert {{ $alert_title }}" role="alert"> 
-    {{ $slot }} 
+<div class="alert {{ $title }}" role="alert">
+    {{ $body }}
+    <br>
+    {{ $footer }}
 </div>
