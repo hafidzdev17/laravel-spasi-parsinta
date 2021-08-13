@@ -13,8 +13,10 @@
 
 <body>
 
-
+    {{ $style }}
+    
     <x-navbar />
+    
     {{ $slot }}
 
 
