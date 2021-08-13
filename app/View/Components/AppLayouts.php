@@ -8,6 +8,8 @@ class AppLayouts extends Component
 {
 
     public $title;
+    public $style = null;
+
     public function __construct($title = null)
     {
         $this->title = $title ?? "Shinra Tensei";
