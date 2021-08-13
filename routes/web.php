@@ -1,12 +1,15 @@
 <?php
 
+use App\Http\Controllers\{HomeController, ProfileController, ContactController, TaskController};
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', HomeController::class);
+Route::get('profile', ProfileController::class);
+Route::get('contact', ContactController::class);
 
-// Route::get('/', fn () => '<img src="assets/images/image.png"  width="400" height="400"/>');
 
-// php 7.4
-Route::get('/', fn () => view('home'));
-Route::get('/profile', fn () => view('profile'));
-Route::get('/about', fn () => view('about'));
-Route::get('/contact', fn () => view('contact'));
+Route::get('task', [TaskController::class, 'index']);
+Route::post('task', [TaskController::class, 'store']);
+Route::get('task/{id}/edit', [TaskController::class, 'edit']);
+Route::put('task/{id}', [TaskController::class, 'update']);
+Route::delete('task/{id}', [TaskController::class, 'destroy']);
