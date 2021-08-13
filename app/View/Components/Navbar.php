@@ -17,9 +17,10 @@ class Navbar extends Component
     {
         $navigations = [
             'Home' => '/',
-            'Profile' => '/profile',
-            'About' => '/about',
-            'Contact' => '/contact',
+            'Profile' => 'profile',
+            'About' => 'about',
+            'Contact' => 'contact',
+            'Tasklist' => 'task'
         ];
 
         return view('layouts.navbar', [
