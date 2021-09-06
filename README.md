@@ -1,1 +1,1 @@
-## **Belajar Laravel 8 Lengkap Dengan Gaya Penulisan Yang Baru**
+## **Repositori Belajar Laravel Dari Awal Dengan Gaya Penulisan Yang Manusiawi Dan Disukai Rekan Kerja**
