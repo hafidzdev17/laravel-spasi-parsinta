@@ -9,7 +9,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $user = DB::table('user')->orderBy('list', 'DESC')->get();
+        $user = DB::table('task')->orderBy('list', 'DESC')->get();
         return view('task.index', [
             'user' => $user
         ]);
@@ -17,7 +17,7 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        DB::table('user')->insert([
+        DB::table('task')->insert([
             'list' => $request->list
         ]);
 
@@ -26,7 +26,7 @@ class TaskController extends Controller
 
     public function edit($id)
     {
-        $user = DB::table('user')->where('id', $id)->first();
+        $user = DB::table('task')->where('id', $id)->first();
         return view('task.edit', [
             'user' => $user
         ]);
@@ -34,7 +34,7 @@ class TaskController extends Controller
 
     public function update(Request $request, $id)
     {
-        DB::table('user')->where('id', $id)->update([
+        DB::table('task')->where('id', $id)->update([
             'list' => $request->list
         ]);
         return redirect('/task')->with('message', 'list successfully updated');
@@ -42,7 +42,7 @@ class TaskController extends Controller
 
     public function destroy($id)
     {
-        DB::table('user')->where('id', $id)->delete();
+        DB::table('task')->where('id', $id)->delete();
         return redirect('/task')->with('message', 'list successfully delete');
     }
 }
