@@ -6,6 +6,8 @@ use App\Http\Traits\UploadTrait;
 use App\Models\Biodata;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UploadController extends Controller
 {
@@ -31,7 +33,7 @@ class UploadController extends Controller
         ]);
 
         // 4. redirect dan tampilkan pesan sukses
-        session()->flash('success', 'Data telah ditambahkan!');
+        Alert::success('Congrats', 'You\'ve Successfully Registered');
         return back();
     }
 }
